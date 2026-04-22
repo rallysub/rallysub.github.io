@@ -1,4 +1,5 @@
 html {
+    background-color: rgb(205, 202, 185);
     --primary: #e63946;
     --secondary: #2a9d8f;
     --dark: #1d3557;
@@ -55,8 +56,8 @@ img {
     display: block;
 }
 header {
-    padding: 80px;
-    height: 20%;
+    padding: 20px;
+    height: 10%;
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -111,25 +112,27 @@ section {
 .content-block {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;   
-    word-wrap: break-word;
+    gap: 40px;
 }
-.content-block img.main-image {
-    max-width: 40%;
+.content-block img {
+    max-width: 20%;
     border-radius: 10px;
-    box-shadow: rgba(0,0,0,0.15);
-    flex-shrink: 0px;
 }
 .content-block h1 {
+    margin: 0px;
+    font-size: 1.2em;
+    text-align: justify;
+}
+.gallery-grid {
     display: flex;
     flex-wrap: wrap;
-    text-align: justify;
-    font-size: 1em;
+    gap: 15px;
 }
 .gallery-grid img {
     border-radius: 8px;
     box-shadow: 4px rgba(0,0,0,0.1);
     cursor: pointer;
+    
 }
 .gallery-grid img:hover {
     transform:translateY(-5px);
