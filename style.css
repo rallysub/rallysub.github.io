@@ -1,5 +1,4 @@
 :root {
-    /* Фирменная палитра Subaru World Rally Team */
     --primary-blue: #0054a6;
     --accent-yellow: #e2e200;
     --bg-dark: #0b0e14;
@@ -8,12 +7,10 @@
     --text-dim: #b0b0b0;
     --transition: all 0.3s ease;
 }
-
 html {
     background-color: var(--bg-dark);
     scroll-behavior: smooth;
 }
-
 body {
     font-family: 'Segoe UI', Roboto, sans-serif;
     margin: 0;
@@ -21,15 +18,11 @@ body {
     line-height: 1.6;
     color: var(--text-main);
 }
-
-/* Контейнеры */
 .container, .containercontent, .containermenu {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
-/* Шапка */
 header {
     height: 60vh;
     display: flex;
@@ -37,26 +30,21 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('djhyvoa4vde21.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('djhyvoa4vde21.jpg') center/cover no-repeat;
     border-bottom: 5px solid var(--primary-blue);
 }
-
 header h1 {
     font-size: clamp(3rem, 8vw, 5rem);
     margin: 0;
     letter-spacing: 8px;
     text-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
-
 header p {
     font-size: 1.5rem;
     color: var(--accent-yellow);
     font-weight: bold;
     letter-spacing: 3px;
 }
-
-/* Навигация */
 nav {
     background-color: rgba(19, 13, 36, 0.95);
     backdrop-filter: blur(10px); /* Эффект стекла */
@@ -65,14 +53,12 @@ nav {
     z-index: 1000;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     padding: 0;
 }
-
 nav ul li a {
     color: var(--text-main);
     text-decoration: none;
@@ -83,17 +69,13 @@ nav ul li a {
     display: block;
     transition: var(--transition);
 }
-
 nav ul li a:hover {
     color: var(--accent-yellow);
     background: rgba(255,255,255,0.05);
 }
-
-/* Основной контент */
 main {
     padding: 60px 0;
 }
-
 h2 {
     font-size: 2.5rem;
     text-align: center;
@@ -101,63 +83,56 @@ h2 {
     text-transform: uppercase;
     position: relative;
 }
-
 h2::after {
-    content: '';
     display: block;
     width: 80px;
     height: 4px;
     background: var(--primary-blue);
     margin: 15px auto;
 }
-
 .content-block {
     display: flex;
-    flex-wrap: wrap; /* Позволяет картинке и тексту вставать друг под друга на узких экранах */
+    flex-wrap: wrap;
     gap: 30px;
     align-items: flex-start;
 }
-
 .content-block img {
-    max-width: 400px; /* Ограничиваем ширину */
-    height: auto;    /* Сохраняем пропорции, чтобы ничего не обрезалось */
-    float: none;     /* Убираем старый float, если он мешает */
+    max-width: 400px;
+    height: auto;
+    float: none;
     display: block;
-    margin: 0 auto 20px auto; /* Центрируем и добавляем отступ снизу */
+    margin: 0 auto 20px auto;
     border-radius: 10px;
 }
 .content-block p {
     font-size: 1.15rem;
     color: var(--text-dim);
     margin-bottom: 1.5rem;
-    text-align: left; /* Убрал justify, он часто портит вид */
+    text-align: left;
     text-indent: 40px;
 }
-
-/* Галерея - теперь сетка */
 .card-img {
     width: 100%;
-    height: 250px; /* Фиксированная высота */
+    height: 250px;
     overflow: hidden;
 }
-
 .card-img img {
     width: 100%;
     height: 250px;
     object-fit: cover; 
-    object-position: top; /* Сместит фокус на верхнюю часть фото (полезно для фото людей) */
+    object-position: top;
 }
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Автоматические колонки */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px 40px 50px 40px;
 }
 .gallery-grid img {
     width: 100%;
-    height: auto; /* Высота будет подстраиваться под пропорции фото */
-    object-fit: contain; /* Картинка впишется целиком, не обрезаясь */
-    background-color: rgba(0,0,0,0.2); /* Темный фон для пустых мест, если фото разного размера */
+    height: auto;
+    object-fit: contain;
+    background-color: rgba(0,0,0,0.2);
     border-radius: 8px;
 }
 .gallery-grid img:hover {
@@ -165,14 +140,11 @@ h2::after {
     border-color: var(--primary-blue);
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
-
-/* Команда */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
-
 .team-card {
     background: var(--card-bg);
     border-radius: 15px;
@@ -180,21 +152,17 @@ h2::after {
     transition: var(--transition);
     border: 1px solid rgba(255,255,255,0.1);
 }
-
 .team-card:hover {
     transform: translateY(-10px);
     background: rgba(255,255,255,0.08);
 }
-
 .card-info {
-    padding: 25px; /* Отступы от всех краев карточки */
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Расстояние между заголовком, ролью и описанием */
-    text-align: left; /* Текст в карточках лучше смотрится по левому краю */
+    gap: 12px;
+    text-align: left;
 }
-
-/* Заголовок в карточке */
 .card-info h3 {
     margin: 0;
     font-size: 1.4rem;
@@ -202,55 +170,194 @@ h2::after {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
-/* Подзаголовок (роль/должность) */
 .card-info .role {
-    color: var(--accent-yellow); /* Или твой акцентный цвет */
+    color: var(--accent-yellow);
     font-weight: 600;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 5px;
 }
-
-/* Описание внутри карточки */
 .card-info .desc {
     margin: 0;
     font-size: 0.95rem;
     line-height: 1.5;
     color: #ccc;
-    /* У карточек красную строку (text-indent) обычно не делают, 
-       так как блоки текста маленькие, но если очень хочется: */
     text-indent: 0; 
 }
-
 footer {
     background-color: var(--darkf);
     color: var(--light);
     padding: 40px 20px;
     margin-top: 60px;
     border-top: 2px solid var(--primary-blue);
-    display: flex;       /* Включаем флекс */
-    justify-content: center; /* Центрируем по горизонтали */
-    text-align: center;  /* Центрируем текст внутри */
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
-
 .foot {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
 }
-
 .foot p {
     margin: 0;
     font-size: 1.1em;
 }
-
 footer a {
     color: var(--accent-yellow);
     text-decoration: none;
 }
-
 footer a:hover {
     text-decoration: underline;
+}
+.main-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.main-menu > li {
+    position: relative;
+}
+nav a {
+    display: block;
+    padding: 15px;
+    color: var(--primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); 
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-bottom: 3px solid var(--primary-blue);
+}
+.dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.submenu li a {
+    padding: 12px;
+    font-size: 0.9em;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.submenu li a:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: var(--accent-yellow);
+}
+.dropdown {
+    position: relative;
+}
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a2e;
+    border-left: 2px solid var(--accent-yellow);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: perspective(400px) rotateX(-30deg) translateY(20px);
+    transform-origin: top;
+    transition: opacity 0.5s ease, 
+                transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                visibility 0.5s;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+}
+.dropdown:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: perspective(400px) rotateX(0deg) translateY(0);
+    pointer-events: auto;
+}
+.submenu li a {
+    padding: 15px 20px;
+    font-size: 0.85rem;
+    color: #ffffff !important; /* Яркий текст */
+    text-align: left;
+    display: block;
+    transition: 0.3s;
+    background: transparent;
+}
+.submenu li a:hover {
+    background: rgba(226, 226, 0, 0.1);
+    padding-left: 30px;
+    color: var(--accent-yellow) !important;
+}
+.dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+}
+@media (max-width: 768px) {
+    .main-menu {
+        grid-template-columns: 1fr;
+    }
+    .submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+        transform: none;
+        box-shadow: none;
+    }
+    .dropdown:hover .submenu {
+        display: block;
+    }
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    .content-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    .content-block img {
+        width: 100%;
+        max-width: 350px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .content-block p {
+        text-indent: 20px;
+        padding: 0;
+        font-size: 0.8em;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .team-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    footer {
+        padding: 20px;
+    }
 }
